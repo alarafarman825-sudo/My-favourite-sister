@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Shreya 💜</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia, "Times New Roman", serif;
+  color:#4d3b55;
+  background:linear-gradient(135deg,#fff7fb,#f8f0ff,#fff9f0);
+  overflow-x:hidden;
+}
+#hearts{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.heart{position:absolute;bottom:-40px;animation:float 8s linear infinite;opacity:.65;font-size:22px}
+@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.7}100%{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+section{position:relative;z-index:1;min-height:100vh;padding:70px 20px;display:flex;align-items:center;justify-content:center}
+.card{max-width:900px;width:100%;background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);box-shadow:0 20px 60px rgba(115,78,130,.15);border-radius:32px;padding:42px;text-align:center}
+.badge{display:inline-block;padding:8px 16px;border-radius:999px;background:#f1ddff;color:#7b4b91;font:600 14px Arial,sans-serif}
+h1{font-size:clamp(45px,10vw,88px);margin:18px 0 10px;color:#7b4b91}
+h2{font-size:clamp(30px,6vw,50px);margin-bottom:18px;color:#744b82}
+p{font-family:Arial,sans-serif;line-height:1.8;font-size:17px}
+.subtitle{font-size:20px;color:#87658f}
+.btn{
+  margin-top:28px;border:0;border-radius:999px;padding:15px 25px;
+  background:#9b6bb0;color:white;font-size:16px;cursor:pointer;
+  box-shadow:0 10px 25px rgba(123,75,145,.22);transition:.25s
+}
+.btn:hover{transform:translateY(-3px);background:#86569c}
+.scroll{margin-top:35px;font:14px Arial;color:#8e7795}
+.message{text-align:left;max-width:680px;margin:0 auto}
+.message p{margin:15px 0}
+.highlight{color:#87539b;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.memory{
+  min-height:150px;border-radius:24px;padding:25px;
+  background:linear-gradient(145deg,#fff,#f5eaff);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:1px solid #ead8f0
+}
+.memory span{font-size:40px;margin-bottom:10px}
+.memory b{font:600 16px Arial;color:#70497e}
+.final{background:linear-gradient(135deg,#f7e9ff,#fff1f6)}
+.big{font-size:clamp(25px,5vw,44px);color:#7b4b91;margin:20px 0}
+.hidden{display:none}
+.reveal{animation:pop .7s ease}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+footer{position:relative;z-index:1;text-align:center;padding:25px;color:#927f99;font:13px Arial}
+@media(max-width:650px){
+ .card{padding:28px 20px;border-radius:25px}
+ .grid{grid-template-columns:1fr}
+ section{padding:45px 15px}
+ p{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+
+<section>
+  <div class="card">
+    <span class="badge">A little something for you 💜</span>
+    <h1>Shreya</h1>
+    <p class="subtitle">My non-blood sister, my forever family 🌸</p>
+    <button class="btn" onclick="document.getElementById('letter').scrollIntoView()">Open Your Letter 💌</button>
+    <div class="scroll">↓ Keep scrolling for a little surprise ↓</div>
+  </div>
+</section>
+
+<section id="letter">
+  <div class="card">
+    <h2>Dear Shreya 🌷</h2>
+    <div class="message">
+      <p>Some people enter our lives without sharing our blood, but somehow they become family.</p>
+      <p>And that's exactly what you are to me — <span class="highlight">a sister by heart.</span> 💜</p>
+      <p>Thank you for all the little moments, the laughs, the random conversations, the support, and simply for being you.</p>
+      <p>Maybe we don't have the same family tree, but that doesn't make our bond any less real. Some relationships are chosen by the heart, and those can become incredibly special.</p>
+      <p>No matter how much life changes, I hope you always remember one thing:</p>
+      <p class="big">You will always have a sister in me. 🫶</p>
+    </div>
+    <button class="btn" onclick="document.getElementById('memories').scrollIntoView()">Our Little Moments ✨</button>
+  </div>
+</section>
+
+<section id="memories">
+  <div class="card">
+    <h2>Little Things That Matter 💕</h2>
+    <p>Not every memory needs a photograph. Some are simply kept in the heart.</p>
+    <div class="grid">
+      <div class="memory"><span>😂</span><b>The silly laughs</b></div>
+      <div class="memory"><span>🌸</span><b>The random talks</b></div>
+      <div class="memory"><span>🤝</span><b>Always having each other</b></div>
+      <div class="memory"><span>✨</span><b>The unforgettable moments</b></div>
+      <div class="memory"><span>🫶</span><b>The bond we chose</b></div>
+      <div class="memory"><span>💜</span><b>Being sisters by heart</b></div>
+    </div>
+    <button class="btn" onclick="document.getElementById('surprise').scrollIntoView()">One Last Thing 🎁</button>
+  </div>
+</section>
+
+<section id="surprise" class="final">
+  <div class="card">
+    <span class="badge">Just for Shreya</span>
+    <h2>There is a little surprise...</h2>
+    <button class="btn" onclick="reveal()">Tap to open 💜</button>
+    <div id="secret" class="hidden">
+      <p class="big">🌸 Shreya, you're not my sister because of blood.</p>
+      <p class="big">You're my sister because of the bond we share. 🫶</p>
+      <p>And honestly, that's something worth keeping forever. 💜</p>
+      <p style="margin-top:20px">Stay happy. Stay the amazing person you are. 🌷</p>
+    </div>
+  </div>
+</section>
+
+<footer>Made with lots of love, respect & sisterly vibes for Shreya 💜</footer>
+
+<script>
+function reveal(){
+  const s=document.getElementById('secret');
+  s.classList.remove('hidden');
+  s.classList.add('reveal');
+  for(let i=0;i<18;i++){
+    setTimeout(()=>{
+      const e=document.createElement('div');
+      e.textContent=['💜','🌸','✨','🫶'][Math.floor(Math.random()*4)];
+      e.style.position='fixed';e.style.left=(10+Math.random()*80)+'vw';e.style.top='70vh';
+      e.style.fontSize=(18+Math.random()*20)+'px';e.style.zIndex=10;
+      e.style.transition='transform 2.2s ease, opacity 2.2s ease';
+      document.body.appendChild(e);
+      requestAnimationFrame(()=>{e.style.transform=`translate(${(Math.random()-.5)*180}px,-${250+Math.random()*350}px) rotate(${Math.random()*120-60}deg)`;e.style.opacity='0'});
+      setTimeout(()=>e.remove(),2300);
+    },i*70);
+  }
+}
+const box=document.getElementById('hearts');
+setInterval(()=>{
+  const h=document.createElement('div');
+  h.className='heart';
+  h.textContent=['💜','♡','🌸','✨'][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+'vw';
+  h.style.animationDuration=(6+Math.random()*5)+'s';
+  h.style.fontSize=(14+Math.random()*18)+'px';
+  box.appendChild(h);
+  setTimeout(()=>h.remove(),11000);
+},550);
+</script>
+</body>
+</html>
